@@ -1,0 +1,150 @@
+@keyframes Charging {
+    50%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1s;
+    }
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    overflow: hidden;
+    background-color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battaryShape{
+    display: flex;
+    justify-content: center;
+    min-height: 450px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.battaryBorder{
+    border: 3px solid black;
+    width: 180px;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.percentage{
+    position: absolute;
+    background-color:blue ;
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    border-radius: 5px;
+    width: 50%; 
+}
+
+.percent{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: 10px ;
+    color: rgb(237, 11, 11);
+}
+.isCharging{
+    margin: 40px 0 0;
+    font-size: 25px;
+    font-weight: 700;
+    animation: Charging 2s ease-in-out infinite;
+}
+
+@media screen and (max-width: 1024px){
+    .card{
+        width: 550px;
+        height: 550px;
+        margin: 25% auto;
+    }
+    .section::before{
+        position: absolute;
+        bottom:70%;
+        left: 10%;
+        width: 400px;
+        height: 400px;
+    }
+    .section::after{
+        position: absolute;
+        bottom:10%;
+        left: 55%;
+        width: 300px;
+        height: 300px;
+    }
+    .isCharging{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 501px){
+    .card{
+        width: 300px;
+        height: 450px;
+        margin: 25% auto;
+    }
+    .section::before{
+        position: absolute;
+        bottom:70%;
+        left: -30%;
+        width: 300px;
+        height: 300px;
+    }
+    .section::after{
+        position: absolute;
+        bottom:20%;
+        left: 35%;
+        width: 230px;
+        height: 230px;
+    }
+    .isCharging{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 370px){
+    .card{
+        width: 300px;
+        height: 450px;
+        margin: 25% auto;
+    }
+    .section::before{
+        position: absolute;
+        bottom:70%;
+        left: -30%;
+        width: 300px;
+        height: 300px;
+    }
+    .section::after{
+        position: absolute;
+        bottom:5%;
+        left: 30%;
+        width: 200px;
+        height: 200px;
+    }
+    .isCharging{
+        font-size: 20px;
+    }
+
+}
